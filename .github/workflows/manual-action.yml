@@ -1,11 +1,26 @@
-name: "My manual workflow"
+name: Step Types
 
 on: 
     workflow_dispatch:
 
 jobs:
-    say-hello-world:
+    say-hello-world-inline-bash:
         runs-on: ubuntu-24.04
         steps:
             - name: "Hello World"
               run: echo "Hello World"
+    
+    say-hello-inline-python:
+        runs-on: ubuntu-24.04
+        steps:
+            - name: "Hello World from Python"
+              run: print("Hello World!")
+              shell: python
+    
+    say-hello-action:
+        runs-on: ubuntu-24.04
+        steps:
+            - name: "Hellow World from Github Actions"
+              uses: actions/hello-world-javascript-action
+              with:
+                who-to-greet: "World and Github"
