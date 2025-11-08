@@ -3,7 +3,7 @@ name: "Basic Action"
 on: 
     push:
         branches:
-            main
+            - main
 
 jobs:
     hello-world:
