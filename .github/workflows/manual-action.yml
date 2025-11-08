@@ -21,6 +21,6 @@ jobs:
         runs-on: ubuntu-24.04
         steps:
             - name: "Hellow World from Github Actions"
-              uses: actions/hello-world-javascript-action
+              uses: actions/hello-world-javascript-action@main
               with:
                 who-to-greet: "World and Github"
