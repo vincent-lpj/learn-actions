@@ -12,6 +12,7 @@ jobs:
     
     say-hello-inline-python:
         runs-on: ubuntu-24.04
+        needs: [say-hello-world-inline-bash, say-hello-action]
         steps:
             - name: "Hello World from Python"
               run: print("Hello World!")
@@ -19,6 +20,7 @@ jobs:
     
     say-hello-action:
         runs-on: ubuntu-24.04
+        needs: say-hello-world-inline-bash
         steps:
             - name: "Hellow World from Github Actions"
               uses: actions/hello-world-javascript-action@main
